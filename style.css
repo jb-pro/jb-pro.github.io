@@ -1,52 +1,136 @@
-html{
+html {
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
     color: #444;
     background: #f2f2f2;
     font-size: 1em;
     line-height: 1.5em;
-
-padding-top: 80px;
+    padding-top: 80px;
 }
-#header{
-    background: #bbb;
+
+img {
+    padding: 10px;
+}
+
+form {
+    background-color: #fafafa;
+    padding: auto;
+}
+
+textarea {
+    float: right;
+    position: relative;
+    width: 450px;
+    height: 200px;
+    margin: auto;
+    resize: none;
+}
+
+span {
+    display: inline-block;
+    padding: 20px;
+}
+
+#header {
+    background: #000;
     color: white;
-    height: 80px;
+    height: 60px;
     width: 100%;
     left: 0;
     top: 0;
     position: fixed;
 }
-nav{
+
+nav {
     float: right;
 }
-    nav ul{
-        margin: 0px;
-        list-style: none;
-        padding-right: 20px;
-    }
-        nav ul li{
-            display: inline-block;
-            line-height: 80px;
-        }
-            nav ul li a{
-                display: block;
-                padding: 0px 10px;
-                text-decoration: none;
-            }
-                nav ul li a:hover{
-                    background: #999;
-                }
-#main-content{
+
+nav ul {
+    margin: 0px;
+    list-style: none;
+    padding-right: 20px;
+    display: flex;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 60px;
+    width: 100px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0px 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+nav ul li a:hover:not(.active) {
+    background: #444;
+}
+
+.active {
+    background-color: #4C0F9B;
+}
+
+nav ul li ul {
+    padding: 0;
+    display: block;
+    position: 50%;
+    background-color: black;
+}
+
+#sub_cursos {
+    padding: 0;
+    display: none;
+}
+
+#cursos:hover>#sub_cursos {
+    display: block;
+}
+
+#sub_tutoriales {
+    padding: 0;
+    display: none;
+}
+
+#tutoriales:hover>#sub_tutoriales {
+    display: block;
+}
+
+.main-content {
     background: #ffffff;
     width: 90%;
     max-width: 800px;
     margin: auto;
     padding: 20px;
+    text-align: justify;
 }
-#advert{
+
+#advert {
     color: red;
+}
+
+#sideNav{
+    height: 100%;
+    width: 0; /*lo cambiamos con js*/
+    position: fixed; /*fijo*/
+    z-index: 1; /*se queda arriba*/
+    top: 0; /*permanece arriba*/
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden; /*deshabilitar el scrolling horizontal*/
+    padding-top: 60px; /*a 60px desde arriba*/
+}
+/*oculta por ahora los menus que no quiero*/
+#cursos{
+    display: none;
+}
+#tutoriales{
+    display: none;
 }
